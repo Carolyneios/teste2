@@ -438,6 +438,7 @@ div.fish {
   h2{
     display: grid;
     text-align: center;
+    align-items: center;
     
   }
 
