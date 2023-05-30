@@ -25,6 +25,22 @@ goTopBtn.addEventListener('click', () => {
 
 
 
+// EIIIIIIIIIIIIII VOLTA
+
+let tituloDinamico = document.title;
+window.addEventListener("blur", () => {
+  document.title = "Fica aqui comigo! 😭"
+})
+
+window.addEventListener("focus", () => {
+  document.title = tituloDinamico
+})
+
+
+
+
+
+
 
 
 
