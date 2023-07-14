@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+
+
+/*-----------------INICIO----------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container p span.typed-text {
+  font-weight: normal;
+  color: rgb(252, 28, 164);
+}
+
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.container p span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #cccccc;
+  }
+
+  49% {
+    background-color: #ccc;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  99% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #ccc;
+  }
+}
+
+/* ------------------TEXTO SOBRE EU------------------*/
+
+
+.grid-mae{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  justify-content: space-around;
+}
+
+.grid-item2{
+  padding: 70px 90px 0px 40px;
+}
+
+h1{
+  text-align: center;
+  font-size: 30px
+}
+
+h2 {
+  text-align: justify;
+  font-size: 30px;
+  padding: 2px;
+}
+
+.carol {
+  color: #fc1ca4;
+}
+
+.estou{
+  margin-left: 70px;
+}
+
+
+
+/*----------------------MEU EU <BONECA>----------------*/
+
+
+@-webkit-keyframes pullUp {
+  0% {
+    -webkit-transform: scaleY(0.5);
+  }
+
+  40% {
+    -webkit-transform: scaleY(1.02);
+  }
+
+  60% {
+    -webkit-transform: scaleY(0.98);
+  }
+
+  80% {
+    -webkit-transform: scaleY(1.01);
+  }
+
+  100% {
+    -webkit-transform: scaleY(0.98);
+  }
+
+  80% {
+    -webkit-transform: scaleY(1.01);
+  }
+
+  100% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+
+#corpo {
+
+  margin-bottom: 200px;
+  margin-left: 9%;
+  border-radius: 50% 50% 0px 0px;
+  background-image: linear-gradient(180deg, #fc1ca4, rgb(0, 0, 0));
+  
+}
+
+
+#cabeca {
+ 
+  z-index: 10;
+  margin-top: 50px;
+  width: 260px;
+  position: absolute;
+  margin-left: 180px;
+  animation-name: tossing;
+  -webkit-animation-name: tossing;
+  animation-duration: 3.5s;
+  -webkit-animation-duration: 3.5s;
+  transform-origin: 50% 90%;
+  -ms-transform-origin: 50% 90%;
+  -webkit-transform-origin: 50% 90%;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes tossing {
+  0% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+@-webkit-keyframes tossing {
+  0% {
+    -webkit-transform: rotate(-3deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(3deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-3deg);
+  }
+}
+
+
+
+/*_______________________SITES__________________________*/
+
+
+.grid-pai {
+  display: grid;
+  grid-template-columns: 63vh 63vh 63vh;
+  
+}
+
+
+.grid-item3 {
+
+  padding: 20px;
+  height: 50vh;
+}
+
+
+.iba {
+  width: 104%;
+  height: 80%;
+  display: grid;
+  border-radius: 10px;
+  z-index: -1;
+  
+}
+
+h3{
+   
+    z-index: 10;
+    top: 100px;
+    margin-left: 200px;
+}
+
+h3:hover{
+    visibility: visible;
+}
+
+
+
+/* ------------- EFEITO COLORIDO NAS FOTOS -------------------*/
+
+.glow-on-hover {
+
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+ 
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ef09fb, rgb(255, 255, 255), #ef09fb, white);
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 26px);
+  height: calc(100% + 8px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+ 
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/*___________________BARRA DE ROLAGEM__________________*/
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fc1ca4;
+  border-radius: 15px;
+
+}
+
+
+/*--------------------FOOOOTER--------------------*/
+
+.conteiner {
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: 1fr minmax(100px, 50%) 1fr;
+  width: 100%;
+  
+}
+
+.co {
+  background-color: rgb(0, 0, 0);
+  display: grid;
+  align-items: center;
+
+}
+
+.con {
+  background-color: rgb(0, 0, 0);
+  display: grid;
+
+}
+
+
+.log {
+  width: 70%;
+
+}
+
+.logo{
+  margin-top: -3px;
+  width: 65px;
+  margin-left: 15px;
+}
+
+.logos{
+  width: 60px;
+  margin-left: 15px;
+}
+
+.cont {
+  display: grid;
+  grid-template-columns: 60% 70px;
+  background-color: #ab4d0a00;
+  padding: 20px;
+  align-items: center;
+  justify-content: end;
+  
+}
+.logos:hover{
+  transition: 0.7s;
+  background: linear-gradient( #fb09aa, rgb(243, 197, 44),rgb(9, 199, 251));
+  border-radius: 90%;
+}
+
+.logo:hover{
+  transition: 0.7s;
+  background: linear-gradient( #fb09aa, rgb(243, 197, 44),rgb(9, 199, 251));
+  border-radius: 100%;
+
+}
+
+#footer{
+  font-size: 25px;
+  text-align: center;
+}
+
+.item{
+  display: flex;
+}
+
+
+/* ------------------ CARREGAMENTO GARY ------------------*/
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div.pre-carregamento {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  transition: 1.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+/*----------------------BOTÃO SCROLL------------------------*/
+
+.go-top-btn {
+  z-index: 10;
+  position: fixed;
+  bottom: 10vh;
+  left: 181vh ;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  background: #000000;
+  border: 2px solid #fc1ca4;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-top-btn img {
+  width: 50px;
+  height: 50px;
+}
+
+.go-top-btn img:hover{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: linear-gradient(rgb(9, 199, 251) , #f3c52c,#fb09aa);
+}
+
+
+ 
+/*♡♡♡♡♡♡♡♡♡♡♡♡   RESPONSIVIDADE ♡♡♡♡♡♡♡♡♡♡♡♡ */
+
+ @media screen and (max-width: 768px) {
+
+  /*♡♡♡  CARREGAMENTO GARY ♡♡♡ */
+
+  .pre-carregamento {
+    margin: auto;
+  }
+
+  /*♡♡♡ EFEITO MAQUINA DE ESCREVER ♡♡♡*/
+
+  .container{
+    height: 50vh;
+  }
+
+  .container p, .typed-text{
+    font-size: 30px;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  /*♡♡♡♡♡♡♡♡ EU E A DESCRIÇÃO ♡♡♡♡♡♡♡*/
+
+  .grid-mae {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #corpo {
+    width: 100%;
+    margin-left: -7px;
+    border-radius: 90% 90% 0px 0px;
+    background-image: linear-gradient(180deg, #fc1ca4, rgb(0, 0, 0));
+  }
+  
+  #cabeca {
+    z-index: 10;
+    margin-top: 40px;
+    width: 180px;
+    position: absolute;
+    margin-left: 70px;
+   
+  }
+
+  .grid-item2{
+    margin-top: -140px;
+  }
+
+  .grid-item2, h1, h2{
+    font-style: oblique;
+    text-align: center;
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .estou{
+    margin-left:0 ;
+}
+
+  /* ♡♡♡ SITES COM LINKS ♡♡♡*/
+
+  .grid-pai {
+    display: inline-block;
+    background-color: #000000;
+    margin-top: 90px;
+  }
+
+  .grid-item3{
+    display: flex;
+    height: 5%;
+    width: 100%;
+  }
+
+  .iba{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .glow-on-hover:before{
+    width: 103%;
+  }
+
+   /* ♡♡♡♡♡♡♡♡♡♡♡♡♡♡ Footer ♡♡♡♡♡♡♡♡♡♡♡♡♡♡*/
+
+  .conteiner {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    bottom: 100vh;
+  }
+
+  .cont {
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+    align-content: center;
+
+   }
+
+  #footer{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+  }
+
+  .log{
+    margin-bottom: 10px;
+
+  }
+
+} 
+
