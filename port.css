@@ -485,14 +485,7 @@ div.pre-carregamento {
     align-items: center;
   }
 
-  #corpo {
-    width: 100%;
-    margin-left: -7px;
-    border-radius: 90% 90% 0px 0px;
-    background-image: linear-gradient(180deg, #fc1ca4, rgb(0, 0, 0));
-  }
-  
-  #cabeca {
+    #cabeca {
     z-index: 10;
     margin-top: 20px;
     width: 180px;
@@ -500,6 +493,14 @@ div.pre-carregamento {
     margin-left: 70px;
    
   }
+  #corpo {
+    width: 100%;
+    margin-left: -7px;
+    border-radius: 90% 90% 0px 0px;
+    background-image: linear-gradient(180deg, #fc1ca4, rgb(0, 0, 0));
+  }
+  
+ 
 
   .grid-item2{
     margin-top: -140px;
